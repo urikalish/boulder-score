@@ -78,7 +78,7 @@ main {
     top: 0;
     z-index: 1;
     background-color: var(--color-bg-primary);
-    padding: 8px;
+    padding: 2px 8px;
 }
 
 .app-title {
