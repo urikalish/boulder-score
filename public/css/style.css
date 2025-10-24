@@ -90,7 +90,7 @@ main {
 .results {
     display: flex;
     justify-content: space-between;
-    margin-top: -8px;
+    margin-top: -10px;
     font-size: 14px;
 }
 .results-info {
