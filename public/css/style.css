@@ -1,0 +1,239 @@
+/* CSS Reset and Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* CSS Custom Properties for Dark Theme */
+:root {
+    --color-bg-primary: #222;
+    --color-bg-elevation: #ccc;
+    --color-text-primary: #ddd;
+    --color-text-secondary: #000;
+    --color-accent: hsl(70, 100%, 50%);
+
+    --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    --font-mono: "Roboto Mono", monospace;
+}
+
+/* Force portrait orientation */
+@media screen and (orientation: landscape) {
+    body::before {
+        content: "Please rotate your device to portrait mode";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        font-family: var(--font-family), sans-serif;
+        font-size: 1.125rem;
+        z-index: 9999;
+    }
+
+    main {
+        display: none;
+    }
+}
+
+/* Base HTML and Body Styles */
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* iOS Safari viewport height fix */
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    overflow-x: hidden;
+
+    /* Prevent text selection and context menu on mobile */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Main Container */
+main {
+    min-height: -webkit-fill-available;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--color-bg-primary);
+    padding: 8px;
+}
+
+.app-title {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    font-size: 14px;
+}
+.results-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.results-label {
+}
+.results-value {
+    color: var(--color-accent);
+    font-size: 18px;
+    font-weight: 500;
+}
+.score-info {
+}
+
+.problems-section {
+    background-color: var(--color-bg-primary);
+    font-family: var(--font-mono), monospace;
+}
+
+.v0 {
+    --color-level-tag: hsl(180, 50%, 50%);
+    --color-level-wall: #ddd;
+}
+.v1 {
+    --color-level-tag: hsl(120, 50%, 50%);
+    --color-level-wall: #ccc;
+}
+.v2 {
+    --color-level-tag: hsl(60, 50%, 50%);
+    --color-level-wall: #ddd;
+}
+.v3 {
+    --color-level-tag: hsl(30, 50%, 50%);
+    --color-level-wall: #ccc;
+}
+.v4 {
+    --color-level-tag: hsl(0, 50%, 50%);
+    --color-level-wall: #ddd;
+}
+.v5 {
+    --color-level-tag: hsl(300, 50%, 50%);
+    --color-level-wall: #ccc;
+}
+.v6 {
+    --color-level-tag: hsl(270, 50%, 50%);
+    --color-level-wall: #ddd;
+}
+.v7 {
+    --color-level-tag: hsl(240, 50%, 50%);
+    --color-level-wall: #ccc;
+}
+.v8 {
+    --color-level-tag: hsl(0, 50%, 0%);
+    --color-level-wall: #ddd;
+}
+
+.problem-identifier {
+    display: flex;
+    align-items: center;
+}
+
+.problem-line {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 16px;
+    border-top: 1px solid #bbb;
+    padding: 6px;
+    background-color: var(--color-level-wall);
+}
+
+.problem-level {
+    display: grid;
+    place-content: center right;
+    width: 32px;
+    height: 16px;
+    background-color: var(--color-level-tag);
+    color: #fff;
+    padding-right: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+
+.problem-number {
+    display: grid;
+    place-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #222;
+    font-weight: 500;
+}
+
+.problem-attempt {
+    position: relative;
+    display: grid;
+    place-content: center;
+    width: 32px;
+    height: 32px;
+    color: #222;
+    font-family: var(--font-mono), monospace;
+    outline: none !important;
+    user-select: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 11px;
+    font-weight: 400;
+    -webkit-tap-highlight-color: transparent;
+}
+.problem-attempt-success {
+    display: none;
+}
+.problem-attempt.success .problem-attempt-success {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: url("../img/hold.svg") no-repeat center;
+    background-size: 32px 32px;
+    filter: grayscale(1);
+}
+.problem-attempt:not(.success)::after {
+    content: attr(data-text);
+    position: relative;
+}
+.problem-attempt.success::after {
+    content: attr(data-text);
+    position: relative;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    background-color: var(--color-bg-primary);
+    padding: 4px 6px;
+}
+
+.footer-text {
+     font-size: 13px;
+}
