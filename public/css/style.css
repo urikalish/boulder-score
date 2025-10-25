@@ -52,6 +52,7 @@ html {
 }
 
 body {
+    opacity: 0;
     min-height: 100vh;
     min-height: -webkit-fill-available; /* iOS Safari viewport height fix */
     font-family: var(--font-family), sans-serif;
@@ -60,11 +61,15 @@ body {
     color: var(--color-text-primary);
     line-height: 1.5;
     overflow-x: hidden;
+    transition: opacity 1s ease-in;
 
     /* Prevent text selection and context menu on mobile */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     user-select: none;
+}
+body.loaded {
+    opacity: 1;
 }
 
 /* Main Container */
