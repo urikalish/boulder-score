@@ -86,7 +86,7 @@ main {
 }
 
 .app-title {
-    font-size: 32px;
+    font-size: 28px;
     color: #666;
 }
 
@@ -94,7 +94,6 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 0 3px;
-    font-size: 14px;
 }
 .results-info {
     display: flex;
@@ -103,6 +102,7 @@ main {
 }
 .results-label {
     white-space: nowrap;
+    font-size: 14px;
 }
 .results-value {
     color: var(--color-ok);
