@@ -1,6 +1,3 @@
-// Use strict mode for better error handling
-'use strict';
-
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize the application
