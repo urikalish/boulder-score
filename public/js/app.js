@@ -1,6 +1,6 @@
 const problems = [];
 
-function showResults() {
+function updateResults() {
     const solvedProblems = [...problems].filter(p => p.successfulAttempt > 0);
     const enoughProblemsSolved = solvedProblems.length >= config.numOfScoredProblems;
     const solvedProblemsElm = document.getElementById('problems-value');
@@ -45,10 +45,10 @@ function handleClickAttempt(event) {
         const btn = document.getElementById(`btn-${problemNumber}-${attemptNumber}`)
         btn.classList.toggle('success', true);
     }
-    showResults();
+    updateResults();
 }
 
-function displayProblems() {
+function buildProblems() {
     const problemsSection = document.getElementById('problems-section');
     config.levels.forEach(l => {
         l.problems.forEach(p => {
@@ -97,4 +97,10 @@ function displayProblems() {
             problemsSection.appendChild(lineElm);
         })
     });
+}
+
+function showUI() {
+    buildProblems();
+    updateResults();
+    document.body.classList.add('loaded');
 }
