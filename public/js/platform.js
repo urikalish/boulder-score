@@ -11,8 +11,7 @@ function init() {
     // Set up viewport height fix for mobile browsers
     setViewportHeight();
 
-    displayProblems();
-    showResults();
+    showUI();
 }
 
 /**
