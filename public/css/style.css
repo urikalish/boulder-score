@@ -61,7 +61,7 @@ body {
     color: var(--color-text-primary);
     line-height: 1.5;
     overflow-x: hidden;
-    transition: opacity 0.3s ease-in;
+    transition: opacity 0.2s ease-in;
 
     /* Prevent text selection and context menu on mobile */
     -webkit-touch-callout: none;
