@@ -58,10 +58,10 @@ const problems = [];
 
 function showResults() {
     const solvedProblems = [...problems].filter(p => p.successfulAttempt > 0);
-    const enoughProblemsSolved = solvedProblems.length >= config.numOfScoredProblems);
+    //const enoughProblemsSolved = solvedProblems.length >= config.numOfScoredProblems);
     const solvedProblemsElm = document.getElementById('problems-value');
     solvedProblemsElm.textContent = `${solvedProblems.length}/${config.numOfScoredProblems}`;
-    solvedProblemsElm.classList.toggle('alert', !enoughProblemsSolved);
+    //solvedProblemsElm.classList.toggle('alert', !enoughProblemsSolved);
     
     solvedProblems.sort((a, b) => {
         if (a.score !== b.score) {
@@ -74,7 +74,7 @@ function showResults() {
     const score = bestProblems.reduce((sum, item) => sum + item.score, 0);
     const scoreElm = document.getElementById('score-value');
     scoreElm.textContent = score.toString();
-    scoreElm.classList.toggle('alert', !enoughProblemsSolved);
+    //scoreElm.classList.toggle('alert', !enoughProblemsSolved);
 }
 
 function handleClickAttempt(event) {
