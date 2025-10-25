@@ -58,9 +58,10 @@ const problems = [];
 
 function showResults() {
     const solvedProblems = [...problems].filter(p => p.successfulAttempt > 0);
-    const problemsElm = document.getElementById('problems-value');
-    problemsElm.textContent = `${solvedProblems.length}/${config.numOfScoredProblems}`;
-
+    const solvedProblemsElm = document.getElementById('problems-value');
+    solvedProblemsElm.textContent = `${solvedProblems.length}/${config.numOfScoredProblems}`;
+    solvedProblemsElm.classList.toggle('alert', solvedProblems.length < config.numOfScoredProblems);
+    
     solvedProblems.sort((a, b) => {
         if (a.score !== b.score) {
             return b.score - a.score;
