@@ -104,7 +104,7 @@ main {
     color: var(--color-ok);
     font-size: 24px;
 }
-.result-value.alert {
+.results-value.alert {
     color: var(--color-alert);
 }
 
