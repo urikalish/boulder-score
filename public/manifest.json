@@ -14,17 +14,12 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%23222222' width='512' height='512'/><text x='50%25' y='50%25' font-family='Roboto, sans-serif' font-size='200' fill='%23ffffff' text-anchor='middle' dominant-baseline='middle'>BS</text></svg>",
-      "sizes": "512x512",
+      "src": "img/hold3.svg",
+      "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     },
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23222222' width='192' height='192'/><text x='50%25' y='50%25' font-family='Roboto, sans-serif' font-size='80' fill='%23ffffff' text-anchor='middle' dominant-baseline='middle'>BS</text></svg>",
-      "sizes": "192x192",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
   ],
   "screenshots": [
     {
@@ -32,21 +27,6 @@
       "sizes": "540x1170",
       "type": "image/svg+xml",
       "label": "BoulderScore Screenshot"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Open App",
-      "short_name": "Open",
-      "description": "Open BoulderScore directly",
-      "url": "/",
-      "icons": [
-        {
-          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%23222222' width='96' height='96'/><text x='50%25' y='50%25' font-family='Roboto, sans-serif' font-size='40' fill='%23ffffff' text-anchor='middle' dominant-baseline='middle'>BS</text></svg>",
-          "sizes": "96x96",
-          "type": "image/svg+xml"
-        }
-      ]
     }
   ],
   "related_applications": [],
