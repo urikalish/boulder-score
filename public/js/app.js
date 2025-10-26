@@ -1,3 +1,37 @@
+document.addEventListener('DOMContentLoaded', () => {
+    checkPWASupport();
+    setViewportHeight();
+    showUI();
+});
+function checkPWASupport() {
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+        console.log('App is running in standalone mode');
+    }
+    window.addEventListener('beforeinstallprompt', (event) => {
+        console.log('App can be installed');
+        event.preventDefault();
+        window.deferredPrompt = event;
+    });
+    window.addEventListener('appinstalled', () => {
+        console.log('App was installed successfully');
+    });
+}
+function setViewportHeight() {
+    const setVH = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
+}
+window.addEventListener('error', (event) => {
+    console.error('An error occurred:', event.error);
+});
+window.addEventListener('unhandledrejection', (event) => {
+    console.error('Unhandled promise rejection:', event.reason);
+});
+
 const config = {
     numOfScoredProblems: 7,
     maxAttemptsPerProblem: 5,
