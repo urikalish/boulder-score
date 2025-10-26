@@ -96,7 +96,6 @@ main {
     height: 40px;
 }
 .masthead-title {
-    margin-left: 4px;
     font-size: 24px;
     font-style: italic;
     color: hsl(20, 100%, 50%);
