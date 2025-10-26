@@ -55,6 +55,9 @@ body {
     opacity: 0;
     min-height: 100vh;
     min-height: -webkit-fill-available; /* iOS Safari viewport height fix */
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
     font-family: var(--font-family), sans-serif;
     font-weight: 400;
     background-color: var(--color-bg-primary);
@@ -71,10 +74,15 @@ body {
 body.loaded {
     opacity: 1;
 }
-
+@media (min-width: 500px) {
+    body {
+        grid-template-columns: auto;
+    }
+}
 /* Main Container */
 main {
     min-height: -webkit-fill-available;
+    max-width: 500px;
 }
 
 .header {
