@@ -87,7 +87,7 @@ main {
 .masthead {
     display: flex;
     align-items: center;
-    padding: 4px 8px;
+    padding: 6px 8px;
     border-bottom: 1px solid #444;
 }
 
