@@ -87,7 +87,7 @@ main {
 .masthead {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #333;
 }
 
 .masthead-icon {
