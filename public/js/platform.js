@@ -18,10 +18,6 @@ function init() {
  * Check for Progressive Web App support
  */
 function checkPWASupport() {
-    if ('serviceWorker' in navigator) {
-        console.log('Service Worker is supported (but not implemented in this example)');
-    }
-
     // Check if app is installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
         console.log('App is running in standalone mode');
@@ -69,17 +65,4 @@ window.addEventListener('error', (event) => {
 
 window.addEventListener('unhandledrejection', (event) => {
     console.error('Unhandled promise rejection:', event.reason);
-});
-
-/**
- * Page Visibility API - optimize when page is not visible
- */
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        console.log('Page is hidden - pausing animations');
-        document.body.style.animationPlayState = 'paused';
-    } else {
-        console.log('Page is visible - resuming animations');
-        document.body.style.animationPlayState = 'running';
-    }
 });

@@ -239,13 +239,11 @@ main {
     background-size: 32px 32px;
     filter: grayscale(1);
 }
-.problem-attempt:not(.success)::after {
+.problem-attempt::after {
     content: attr(data-text);
     position: relative;
 }
 .problem-attempt.success::after {
-    content: attr(data-text);
-    position: relative;
     color: #000;
     font-size: 13px;
     font-weight: 700;
