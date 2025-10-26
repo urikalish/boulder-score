@@ -94,6 +94,7 @@ main {
 .masthead-icon {
     width: 40px;
     height: 40px;
+    margin-left: -2px;
 }
 .masthead-title {
     font-size: 24px;
