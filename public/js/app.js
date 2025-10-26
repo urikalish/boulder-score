@@ -102,5 +102,7 @@ function buildProblems() {
 function showUI() {
     buildProblems();
     updateResults();
+    const img = new Image();
+    img.src = 'img/hold.svg';
     document.body.classList.add('loaded');
 }
