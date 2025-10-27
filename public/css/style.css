@@ -1,4 +1,3 @@
-/* CSS Reset and Base Styles */
 *,
 *::before,
 *::after {
@@ -6,19 +5,52 @@
     margin: 0;
 }
 
-/* CSS Custom Properties for Dark Theme */
 :root {
+    --font-family: 'Play', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    --font-mono: "Roboto Mono", monospace;
     --color-bg-primary: #222;
     --color-text-primary: #ddd;
     --color-ok: hsl(70, 100%, 50%);
     --color-alert: hsl(20, 100%, 50%);
-
-    --font-family: 'Play', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-    --font-mono: "Roboto Mono", monospace;
 }
 
-/* Force portrait orientation */
-@media screen and (orientation: landscape) {
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    opacity: 0;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    overflow-x: hidden;
+    transition: opacity 0.25s ease-in;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+body.loaded {
+    opacity: 1;
+}
+
+@media (min-width: 501px) {
+    body {
+        grid-template-columns: auto;
+        background-color: #eee;
+    }
+}
+
+@media screen and (max-width: 500px) and (orientation: landscape) {
     body::before {
         content: "Please rotate your device to portrait mode";
         position: fixed;
@@ -37,49 +69,11 @@
         font-size: 1.125rem;
         z-index: 9999;
     }
-
     main {
         display: none;
     }
 }
 
-/* Base HTML and Body Styles */
-html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
-
-body {
-    opacity: 0;
-    min-height: 100vh;
-    min-height: -webkit-fill-available; /* iOS Safari viewport height fix */
-    display: grid;
-    grid-template-columns: 1fr;
-    place-content: center;
-    font-family: var(--font-family), sans-serif;
-    font-weight: 400;
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
-    line-height: 1.5;
-    overflow-x: hidden;
-    transition: opacity 0.25s ease-in;
-
-    /* Prevent text selection and context menu on mobile */
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-}
-body.loaded {
-    opacity: 1;
-}
-@media (min-width: 500px) {
-    body {
-        grid-template-columns: auto;
-    }
-}
-/* Main Container */
 main {
     min-height: -webkit-fill-available;
     max-width: 500px;
