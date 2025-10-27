@@ -105,15 +105,15 @@ main {
     margin-left: -2px;
 }
 .masthead-title {
+    margin-left: 6px;
     font-size: 24px;
-    font-style: italic;
     color: hsl(20, 100%, 50%);
 }
 
 .results {
     display: flex;
     justify-content: space-between;
-    padding: 0 8px;
+    padding: 0 6px;
 }
 .results-info {
     display: flex;
