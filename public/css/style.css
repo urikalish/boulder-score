@@ -50,7 +50,8 @@ body.loaded {
     }
 }
 
-@media screen and (max-width: 450px) and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 450px),
+screen and (orientation: landscape) and (max-height: 450px) {
     body::before {
         content: "Please rotate your device to portrait mode";
         position: fixed;
