@@ -43,14 +43,14 @@ body.loaded {
     opacity: 1;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 451px) {
     body {
         grid-template-columns: auto;
         background-color: #eee;
     }
 }
 
-@media screen and (max-width: 500px) and (orientation: landscape) {
+@media screen and (max-width: 450px) and (orientation: landscape) {
     body::before {
         content: "Please rotate your device to portrait mode";
         position: fixed;
@@ -76,7 +76,7 @@ body.loaded {
 
 main {
     min-height: -webkit-fill-available;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 .header {
