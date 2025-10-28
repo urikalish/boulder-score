@@ -147,7 +147,7 @@ function buildProblems() {
             });
 
             const lineElm = document.createElement('div');
-            lineElm.classList.add('problem-line', `v${l.v}`);
+            lineElm.classList.add('problem-line', `v${l.v}`, l.v % 2 === 0 ? 'even-v' : 'odd-v');
 
             const problemLineIdentifierElm = document.createElement('div');
             problemLineIdentifierElm.classList.add('problem-identifier');

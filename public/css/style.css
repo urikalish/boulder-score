@@ -133,39 +133,30 @@ main {
 
 .v0 {
     --color-level-tag: hsl(180, 50%, 50%);
-    --color-level-wall: #ddd;
 }
 .v1 {
     --color-level-tag: hsl(120, 50%, 50%);
-    --color-level-wall: #ccc;
 }
 .v2 {
     --color-level-tag: hsl(60, 50%, 50%);
-    --color-level-wall: #ddd;
 }
 .v3 {
     --color-level-tag: hsl(30, 50%, 50%);
-    --color-level-wall: #ccc;
 }
 .v4 {
     --color-level-tag: hsl(0, 50%, 50%);
-    --color-level-wall: #ddd;
 }
 .v5 {
     --color-level-tag: hsl(300, 50%, 50%);
-    --color-level-wall: #ccc;
 }
 .v6 {
     --color-level-tag: hsl(270, 50%, 50%);
-    --color-level-wall: #ddd;
 }
 .v7 {
     --color-level-tag: hsl(240, 50%, 50%);
-    --color-level-wall: #ccc;
 }
 .v8 {
     --color-level-tag: hsl(0, 50%, 0%);
-    --color-level-wall: #ddd;
 }
 
 .problem-identifier {
@@ -179,7 +170,12 @@ main {
     gap: 16px;
     border-top: 1px solid #bbb;
     padding: 6px;
-    background-color: var(--color-level-wall);
+}
+.problem-line.even-v {
+    background-color: #ddd;
+}
+.problem-line.odd-v {
+    background-color: #ccc;
 }
 
 .problem-level {
