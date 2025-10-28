@@ -31,10 +31,11 @@
   ],
   "screenshots": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 1170'><rect fill='%23222222' width='540' height='1170'/><rect x='120' y='535' width='300' height='100' rx='16' fill='%231e1e1e'/><text x='50%25' y='50%25' font-family='Roboto, sans-serif' font-size='40' fill='%23ffffff' text-anchor='middle' dominant-baseline='middle'>BoulderScore</text></svg>",
-      "sizes": "540x1170",
-      "type": "image/svg+xml",
-      "label": "BoulderScore Screenshot"
+      "src": "img/screenshot.jpg",
+      "sizes": "1080x2340",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Mobile view of the application"
     }
   ],
   "related_applications": [],
