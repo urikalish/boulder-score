@@ -161,16 +161,11 @@ main {
     --color-level-tag: hsl(0, 50%, 0%);
 }
 
-.problem-identifier {
-    display: flex;
-    align-items: center;
-}
-
 .problem-line {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     gap: 16px;
-    border-top: 1px solid #bbb;
+    border-top: 1px solid #0002;
     padding: 6px;
 }
 .problem-line.even-v {
@@ -178,6 +173,11 @@ main {
 }
 .problem-line.odd-v {
     background-color: #fff6;
+}
+
+.problem-identifier {
+    display: flex;
+    align-items: center;
 }
 
 .problem-level {
