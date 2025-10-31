@@ -229,7 +229,7 @@ main {
     inset: 0;
     background: url("../img/hold3.svg") no-repeat center;
     background-size: 32px 32px;
-    filter: grayscale(0.4);
+    filter: grayscale(0.3);
 }
 .problem-attempt::after {
     content: attr(data-text);
