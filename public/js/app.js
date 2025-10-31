@@ -191,7 +191,9 @@ function buildProblems() {
 function showUI() {
     buildProblems();
     updateResults();
-    const img = new Image();
-    img.src = 'img/hold5.svg';
+    const img1 = new Image();
+    img1.src = 'img/wood.svg';
+    const img2 = new Image();
+    img2.src = 'img/hold5.svg';
     document.body.classList.add('loaded');
 }
