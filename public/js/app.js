@@ -175,7 +175,7 @@ function buildProblems() {
 
                 const attemptSuccessElm = document.createElement('div');
                 attemptSuccessElm.classList.add('problem-attempt-success');
-                const randomRotate = Math.floor(Math.random()*60);
+                const randomRotate = Math.floor(Math.random()*45);
                 const rotateAngle = p % 2 === 0 ? randomRotate : -randomRotate;
                 attemptSuccessElm.style.transform = `rotate(${rotateAngle}deg)`;
                 attemptElm.appendChild(attemptSuccessElm);
@@ -192,6 +192,6 @@ function showUI() {
     buildProblems();
     updateResults();
     const img = new Image();
-    img.src = 'img/hold.svg';
+    img.src = 'img/hold5.svg';
     document.body.classList.add('loaded');
 }

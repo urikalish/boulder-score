@@ -128,6 +128,8 @@ main {
 
 .problems-section {
     background-color: var(--color-bg-primary);
+    background-size: cover;
+    background-image: url("../img/wood.jpg");
     font-family: var(--font-mono), monospace;
 }
 
@@ -172,10 +174,10 @@ main {
     padding: 6px;
 }
 .problem-line.even-v {
-    background-color: #ddd;
+    background-color: #fff9;
 }
 .problem-line.odd-v {
-    background-color: #ccc;
+    background-color: #fff6;
 }
 
 .problem-level {
@@ -225,9 +227,9 @@ main {
     display: block;
     position: absolute;
     inset: 0;
-    background: url("../img/hold.svg") no-repeat center;
+    background: url("../img/hold3.svg") no-repeat center;
     background-size: 32px 32px;
-    filter: grayscale(1);
+    filter: grayscale(0.2);
 }
 .problem-attempt::after {
     content: attr(data-text);
