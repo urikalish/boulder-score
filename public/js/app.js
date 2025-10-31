@@ -177,7 +177,7 @@ function buildProblems() {
                 attemptSuccessElm.classList.add('problem-attempt-success');
                 const randomRotate = Math.floor(Math.random()*45);
                 const rotateAngle = (p % 2 === 0) ? randomRotate : -randomRotate;
-                attemptSuccessElm.style.transform = `rotate(${rotateAngle}deg)`;
+                attemptSuccessElm.style.transform = `rotate(${-21 + rotateAngle}deg)`;
                 attemptElm.appendChild(attemptSuccessElm);
 
                 lineElm.appendChild(attemptElm);
