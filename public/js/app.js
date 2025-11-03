@@ -188,9 +188,20 @@ function buildProblems() {
     });
 }
 
+function attachEvents() {
+    const dialog = document.getElementById('qr-dialog');
+    document.getElementById('btn-show-qr').addEventListener('click', () => {
+        dialog.showModal();
+    })
+    document.getElementById('qr-dialog').addEventListener('click', () => {
+        dialog.close();
+    });
+}
+
 function showUI() {
     buildProblems();
     updateResults();
+    attachEvents()
     const holdImg = new Image();
     holdImg.src = 'img/hold5.svg';
     document.body.classList.add('loaded');

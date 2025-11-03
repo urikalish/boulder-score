@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="img/wood.jpg" as="image">
+    <link rel="preload" href="img/qr.png" as="image">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <link rel="manifest" href="manifest.json">
@@ -32,8 +33,15 @@
 <main>
     <section class="header">
         <div class="masthead">
-            <img src="img/favicon.svg" class="masthead-icon" alt="application icon">
-            <div class="masthead-title">BoulderScore</div>
+            <div class="masthead-left">
+                <img src="img/favicon.svg" class="masthead-icon" alt="application icon">
+                <div class="masthead-title">BoulderScore</div>
+            </div>
+            <div class="masthead-right">
+                <button id="btn-show-qr" class="masthead-btn-show-qr">
+                    <img src="img/qr.png" class="masthead-img-show-qr" alt="application QR code">
+                </button>
+            </div>
         </div>
         <div class="results">
             <div class="results-info score-info">
@@ -51,6 +59,9 @@
     <section class="footer">
         <div class="footer-text">BoulderScore by Uri Kalish</div>
     </section>
+    <dialog id="qr-dialog">
+        <img src="img/qr.png" class="large-qr" alt="application QR code">
+    </dialog>
 </main>
 </body>
 </html>
