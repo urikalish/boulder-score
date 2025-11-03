@@ -117,13 +117,14 @@ main {
     height: 28px;
     outline: none;
     border: none;
+    border-radius: 2px;
+    overflow: hidden;
     padding: 0;
     cursor: pointer;
 }
 .masthead-img-show-qr {
     width: 28px;
     height: 28px;
-    border-radius: 2px;
 }
 dialog {
     width: 70vw;
