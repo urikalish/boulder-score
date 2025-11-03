@@ -123,6 +123,7 @@ main {
 .masthead-img-show-qr {
     width: 28px;
     height: 28px;
+    border-radius: 1px;
 }
 dialog {
     width: 70vw;
