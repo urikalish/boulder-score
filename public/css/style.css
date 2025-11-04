@@ -120,12 +120,12 @@ main {
     border-radius: 2px;
     overflow: hidden;
     padding: 0;
+    opacity: 0.5;
     cursor: pointer;
 }
 .masthead-img-show-qr {
     width: 40px;
     height: 40px;
-    opacity: 0.5;
 }
 dialog {
     width: 70vw;
