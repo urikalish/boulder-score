@@ -117,7 +117,7 @@ main {
     height: 28px;
     outline: none;
     border: none;
-    border-radius: 2px;
+    border-radius: 1px;
     overflow: hidden;
     padding: 0;
     cursor: pointer;
