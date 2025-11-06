@@ -91,7 +91,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 7px 6px 8px;
+    height: 48px;
+    padding: 0 8px;
     border-bottom: 1px solid #444;
 }
 .masthead-left {
@@ -112,49 +113,17 @@ main {
     justify-content: end;
     align-items: center;
 }
-.masthead-btn-show-qr {
-    width: 36px;
-    height: 36px;
-    outline: none;
-    border: none;
-    border-radius: 2px;
-    overflow: hidden;
-    padding: 0;
-    opacity: 0.8;
-    cursor: pointer;
-}
-.masthead-img-show-qr {
-    width: 36px;
-    height: 36px;
-}
-dialog {
-    width: 70vw;
-    height: 70vw;
-    max-width: 250px;
-    max-height: 250px;
-    position: fixed;
-    top: 140px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: none;
-    border-radius: 4px;
-    padding: 0;
-    overflow: hidden;
-    user-select: none;
-}
-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-}
-.large-qr {
-    width: 100%;
-    height: 100%;
-}
 
 .results {
     display: flex;
     justify-content: space-between;
+    height: 48px;
     padding: 0 6px;
+}
+.results-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 .results-info {
     display: flex;
@@ -166,11 +135,31 @@ dialog::backdrop {
     font-size: 14px;
 }
 .results-value {
+    position: relative;
+    top: -1px;
     color: var(--color-ok);
     font-size: 24px;
 }
 .results-value.alert {
     color: var(--color-alert);
+}
+.results-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.results-btn-clear-all {
+    width: 28px;
+    height: 28px;
+    outline: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.results-img-clear-all {
+    width: 28px;
+    height: 28px;
 }
 
 .problems-section {
@@ -276,7 +265,7 @@ dialog::backdrop {
     inset: 0;
     background: url("../img/hold3.svg") no-repeat center;
     background-size: 32px 32px;
-    filter: grayscale(0.25);
+    filter: grayscale(0.3);
 }
 .problem-attempt::after {
     content: attr(data-text);
@@ -290,11 +279,48 @@ dialog::backdrop {
 
 .footer {
     display: flex;
-    justify-content: end;
+    align-items: center;
+    gap: 6px;
+    height: 48px;
+    padding: 0 6px;
     background-color: var(--color-bg-primary);
-    padding: 4px 6px;
 }
-
 .footer-text {
-     font-size: 13px;
+     font-size: 16px;
+}
+.btn-show-qr {
+    width: 28px;
+    height: 28px;
+    outline: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.img-show-qr {
+    width: 28px;
+    height: 28px;
+}
+dialog {
+    width: 70vw;
+    height: 70vw;
+    max-width: 250px;
+    max-height: 250px;
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+.large-qr {
+    width: 100%;
+    height: 100%;
 }

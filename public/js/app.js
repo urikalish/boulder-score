@@ -135,6 +135,18 @@ function handleClickAttempt(event) {
     updateResults();
 }
 
+function clearAll() {
+    problems.forEach(p => {
+        p.successfulAttempt = 0;
+        p.score = 0;
+    });
+    const attemptBtnElms = document.querySelectorAll('.problem-attempt');
+    attemptBtnElms.forEach(elm => {
+        elm.classList.toggle('success', false);
+    })
+    updateResults();
+}
+
 function buildProblems() {
     const problemsSection = document.getElementById('problems-section');
     config.levels.forEach(l => {
@@ -189,6 +201,7 @@ function buildProblems() {
 }
 
 function attachEvents() {
+    document.getElementById('btn-clear-all').addEventListener('click', clearAll);
     const dialog = document.getElementById('qr-dialog');
     document.getElementById('btn-show-qr').addEventListener('click', () => {
         dialog.showModal();

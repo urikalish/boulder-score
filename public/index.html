@@ -38,25 +38,32 @@
                 <div class="masthead-title">BoulderScore</div>
             </div>
             <div class="masthead-right">
-                <button id="btn-show-qr" class="masthead-btn-show-qr">
-                    <img src="img/qr.png" class="masthead-img-show-qr" alt="application QR code">
-                </button>
             </div>
         </div>
         <div class="results">
-            <div class="results-info score-info">
-                <div class="results-label score-label">Total score:</div>
-                <div id="score-value" class="results-value score-value"></div>
+            <div class="results-left">
+                <div class="results-info problems-info">
+                    <div class="results-label problems-label">Tops:</div>
+                    <div id="problems-value" class="results-value problems-value"></div>
+                </div>
+                <div class="results-info score-info">
+                    <div class="results-label score-label">Score:</div>
+                    <div id="score-value" class="results-value score-value"></div>
+                </div>
             </div>
-            <div class="results-info problems-info">
-                <div class="results-label problems-label">Topped problems:</div>
-                <div id="problems-value" class="results-value problems-value"></div>
+            <div class="results-right">
+                <button id="btn-clear-all" class="results-btn-clear-all">
+                    <img src="img/icon-clear-all.svg" class="results-img-clear-all" alt="clear all">
+                </button>
             </div>
         </div>
     </section>
     <section id="problems-section" class="problems-section">
     </section>
     <section class="footer">
+        <button id="btn-show-qr" class="btn-show-qr">
+            <img src="img/qr.png" class="img-show-qr" alt="application QR code">
+        </button>
         <div class="footer-text">BoulderScore by Uri Kalish</div>
     </section>
     <dialog id="qr-dialog">
