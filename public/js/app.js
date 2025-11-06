@@ -200,15 +200,26 @@ function buildProblems() {
     });
 }
 
+function showQRDialog() {
+    if ('vibrate' in navigator) {
+        navigator.vibrate(15);
+    }
+    const dialog = document.getElementById('qr-dialog');
+    dialog.showModal();
+}
+
+function closeQRDialog() {
+    if ('vibrate' in navigator) {
+        navigator.vibrate(15);
+    }
+    const dialog = document.getElementById('qr-dialog');
+    dialog.close();
+}
+
 function attachEvents() {
     document.getElementById('btn-clear-all').addEventListener('click', clearAll);
-    const dialog = document.getElementById('qr-dialog');
-    document.getElementById('btn-show-qr').addEventListener('click', () => {
-        dialog.showModal();
-    })
-    document.getElementById('qr-dialog').addEventListener('click', () => {
-        dialog.close();
-    });
+    document.getElementById('btn-show-qr').addEventListener('click', showQRDialog);
+    document.getElementById('qr-dialog').addEventListener('click', closeQRDialog);
 }
 
 function showUI() {
