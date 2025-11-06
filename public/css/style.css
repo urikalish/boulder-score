@@ -148,16 +148,17 @@ main {
     align-items: center;
     gap: 16px;
 }
-.results-btn-clear-all {
+.btn-clear-all {
     width: 28px;
     height: 28px;
     outline: none;
     border: none;
     padding: 0;
     background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
 }
-.results-img-clear-all {
+.img-clear-all {
     width: 28px;
     height: 28px;
 }
@@ -295,6 +296,7 @@ main {
     border: none;
     padding: 0;
     background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
 }
 .img-show-qr {
