@@ -135,8 +135,6 @@ main {
     font-size: 14px;
 }
 .results-value {
-    position: relative;
-    top: -1px;
     color: var(--color-ok);
     font-size: 24px;
 }
