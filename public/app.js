@@ -72,6 +72,8 @@ function updateResults() {
     const scoreElm = document.getElementById('score-value');
     scoreElm.textContent = score.toString();
     scoreElm.classList.toggle('alert', !enoughProblemsSolved);
+
+    document.getElementById('btn-clear-all').classList.toggle('enabled', solvedProblems.length > 0);
 }
 
 function handleClickAttempt(event) {

@@ -155,6 +155,13 @@ main {
     background-color: transparent;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+    opacity: 0.3;
+    pointer-events: none;
+}
+.btn-clear-all.enabled {
+    opacity: 1;
+    pointer-events: auto;
+
 }
 .img-clear-all {
     width: 100%;
@@ -262,7 +269,7 @@ main {
     display: block;
     position: absolute;
     inset: 0;
-    background: url("../img/hold3.svg") no-repeat center;
+    background: url("../img/hold.svg") no-repeat center;
     background-size: 32px 32px;
     filter: grayscale(0.3);
 }
