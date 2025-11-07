@@ -169,31 +169,31 @@ main {
 }
 
 .v0 {
-    --color-level-tag: hsl(180, 50%, 50%);
+    --color-level-tag: hsl(180, 40%, 50%);
 }
 .v1 {
-    --color-level-tag: hsl(120, 50%, 50%);
+    --color-level-tag: hsl(120, 40%, 50%);
 }
 .v2 {
-    --color-level-tag: hsl(60, 50%, 50%);
+    --color-level-tag: hsl(60, 40%, 50%);
 }
 .v3 {
-    --color-level-tag: hsl(30, 50%, 50%);
+    --color-level-tag: hsl(30, 40%, 50%);
 }
 .v4 {
-    --color-level-tag: hsl(0, 50%, 50%);
+    --color-level-tag: hsl(0, 40%, 50%);
 }
 .v5 {
-    --color-level-tag: hsl(300, 50%, 50%);
+    --color-level-tag: hsl(315, 40%, 50%);
 }
 .v6 {
-    --color-level-tag: hsl(270, 50%, 50%);
+    --color-level-tag: hsl(270, 40%, 50%);
 }
 .v7 {
-    --color-level-tag: hsl(240, 50%, 50%);
+    --color-level-tag: hsl(225, 40%, 50%);
 }
 .v8 {
-    --color-level-tag: hsl(0, 50%, 0%);
+    --color-level-tag: hsl(0, 40%, 0%);
 }
 
 .problem-line {
@@ -285,8 +285,8 @@ main {
     background-color: var(--color-bg-primary);
 }
 .btn-show-qr {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     outline: none;
     border: none;
     padding: 0;
