@@ -135,7 +135,14 @@ function handleClickAttempt(event) {
     updateResults();
 }
 
+function vibrate() {
+    if ('vibrate' in navigator) {
+        navigator.vibrate(15);
+    }
+}
+
 function clearAll() {
+    vibrate();
     problems.forEach(p => {
         p.successfulAttempt = 0;
         p.score = 0;
@@ -201,17 +208,13 @@ function buildProblems() {
 }
 
 function showQRDialog() {
-    if ('vibrate' in navigator) {
-        navigator.vibrate(15);
-    }
+    vibrate();
     const dialog = document.getElementById('qr-dialog');
     dialog.showModal();
 }
 
 function closeQRDialog() {
-    if ('vibrate' in navigator) {
-        navigator.vibrate(15);
-    }
+    vibrate();
     const dialog = document.getElementById('qr-dialog');
     dialog.close();
 }
