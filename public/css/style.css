@@ -304,7 +304,7 @@ dialog {
     height: 70vw;
     max-width: 250px;
     max-height: 250px;
-    position: absolute;
+    position: fixed;
     top: 140px;
     left: 50%;
     transform: translateX(-50%);
