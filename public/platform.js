@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showUI();
 });
 window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
     e.prompt();
 });
 if ('serviceWorker' in navigator) {
