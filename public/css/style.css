@@ -193,7 +193,7 @@ main {
     --color-level-tag: hsl(225, 40%, 50%);
 }
 .v8 {
-    --color-level-tag: hsl(0, 40%, 0%);
+    --color-level-tag: hsl(0, 0%, 0%);
 }
 
 .problem-line {
