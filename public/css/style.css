@@ -172,13 +172,13 @@ main {
     --color-level-tag: hsl(180, 50%, 50%);
 }
 .v1 {
-    --color-level-tag: hsl(135, 50%, 50%);
+    --color-level-tag: hsl(120, 50%, 50%);
 }
 .v2 {
     --color-level-tag: hsl(90, 50%, 50%);
 }
 .v3 {
-    --color-level-tag: hsl(45, 50%, 50%);
+    --color-level-tag: hsl(60, 50%, 50%);
 }
 .v4 {
     --color-level-tag: hsl(0, 50%, 50%);
