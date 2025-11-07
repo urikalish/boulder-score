@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setViewportHeight();
     showUI();
 });
-window.addEventListener('beforeinstallprompt', () => {
-    alert('beforeinstallprompt');
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.prompt();
 });
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
