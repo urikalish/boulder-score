@@ -1,17 +1,3 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-            console.log('Service Worker registered:', registration);
-        })
-        .catch(error => {
-            console.log('Service Worker registration failed:', error);
-        });
-}
-document.addEventListener('DOMContentLoaded', () => {
-    checkPWASupport();
-    setViewportHeight();
-    showUI();
-});
 function checkPWASupport() {
     if (window.matchMedia('(display-mode: standalone)').matches) {
         console.log('App is running in standalone mode');
@@ -40,3 +26,17 @@ window.addEventListener('error', (event) => {
 window.addEventListener('unhandledrejection', (event) => {
     console.error('Unhandled promise rejection:', event.reason);
 });
+document.addEventListener('DOMContentLoaded', () => {
+    checkPWASupport();
+    setViewportHeight();
+    showUI();
+});
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+            console.log('Service Worker registered:', registration);
+        })
+        .catch(error => {
+            console.log('Service Worker registration failed:', error);
+        });
+}
