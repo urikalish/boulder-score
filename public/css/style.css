@@ -308,7 +308,7 @@ dialog {
     left: 50%;
     transform: translateX(-50%);
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 0;
     overflow: hidden;
     user-select: none;
