@@ -176,7 +176,7 @@ main {
 }
 
 .v0 {
-    --color-level-tag: hsl(30, 40%, 50%);
+    --color-level-tag: hsl(30, 100%, 50%);
 }
 .v1 {
     --color-level-tag: hsl(60, 40%, 50%);
