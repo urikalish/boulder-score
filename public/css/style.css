@@ -179,25 +179,25 @@ main {
     --color-level-tag: hsl(0, 0%, 50%);
 }
 .v1 {
-    --color-level-tag: hsl(45, 30%, 50%);
+    --color-level-tag: hsl(45, 40%, 50%);
 }
 .v2 {
-    --color-level-tag: hsl(90, 30%, 50%);
+    --color-level-tag: hsl(90, 40%, 50%);
 }
 .v3 {
-    --color-level-tag: hsl(180, 30%, 50%);
+    --color-level-tag: hsl(180, 40%, 50%);
 }
 .v4 {
-    --color-level-tag: hsl(225, 30%, 50%);
+    --color-level-tag: hsl(225, 40%, 50%);
 }
 .v5 {
-    --color-level-tag: hsl(270, 30%, 50%);
+    --color-level-tag: hsl(270, 40%, 50%);
 }
 .v6 {
-    --color-level-tag: hsl(315, 30%, 50%);
+    --color-level-tag: hsl(315, 40%, 50%);
 }
 .v7 {
-    --color-level-tag: hsl(0, 30%, 50%);
+    --color-level-tag: hsl(0, 40%, 50%);
 }
 .v8 {
     --color-level-tag: hsl(0, 0%, 0%);
