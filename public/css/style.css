@@ -211,10 +211,10 @@ main {
     padding: 6px 8px;
 }
 .problem-line.even-v {
-    background-color: #fff9;
+    background-color: #fff6;
 }
 .problem-line.odd-v {
-    background-color: #fff6;
+    background-color: #fff9;
 }
 
 .problem-identifier {
