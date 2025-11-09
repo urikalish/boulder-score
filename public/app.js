@@ -115,7 +115,7 @@ function clearAll() {
         p.successfulAttempt = 0;
         p.score = 0;
     });
-    const attemptBtnElms = document.querySelectorAll('.problem-attempt');
+    const attemptBtnElms = document.querySelectorAll('.problem-attempt.success');
     attemptBtnElms.forEach(elm => {
         elm.classList.toggle('success', false);
     })
