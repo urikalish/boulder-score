@@ -68,6 +68,16 @@ function updateResults() {
     });
 
     const bestProblems = solvedProblems.slice(0, config.numOfScoredProblems);
+
+    const attemptBtnElms = document.querySelectorAll('.problem-attempt.success');
+    attemptBtnElms.forEach(elm => {
+        elm.classList.toggle('inactive', true);
+    })
+    bestProblems.forEach(p => {
+        const btn = document.getElementById(`btn-${p.number}-${p.successfulAttempt}`);
+        btn.classList.toggle('inactive', false);
+    })
+
     const score = bestProblems.reduce((sum, item) => sum + item.score, 0);
     const scoreElm = document.getElementById('score-value');
     scoreElm.textContent = score.toString();
@@ -118,6 +128,7 @@ function clearAll() {
     const attemptBtnElms = document.querySelectorAll('.problem-attempt.success');
     attemptBtnElms.forEach(elm => {
         elm.classList.toggle('success', false);
+        elm.classList.toggle('inactive', false);
     })
     updateResults();
 }

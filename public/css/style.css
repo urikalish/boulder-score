@@ -273,6 +273,10 @@ main {
     background-size: 32px 32px;
     filter: grayscale(0.3);
 }
+.problem-attempt.success.inactive .problem-attempt-success {
+    filter: grayscale(1);
+    opacity: 0.5;
+}
 .problem-attempt::after {
     content: attr(data-text);
     position: relative;
