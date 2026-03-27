@@ -19,7 +19,6 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    touch-action: pan-y;
 }
 
 body {
@@ -35,7 +34,6 @@ body {
     color: var(--color-text-primary);
     line-height: 1.5;
     overflow-x: hidden;
-    touch-action: pan-y;
     transition: opacity 0.25s ease-in;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
