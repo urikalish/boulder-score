@@ -40,3 +40,13 @@ if ('serviceWorker' in navigator) {
             console.log('Service Worker registration failed:', error);
         });
 }
+
+document.addEventListener('touchstart', (event) => {
+  if (event.touches.length > 1) {
+    event.preventDefault(); // Prevents multi-touch (pinch) zooming
+  }
+}, { passive: false });
+
+document.addEventListener('gesturestart', (event) => {
+  event.preventDefault(); // Specific to Safari/iOS
+});
