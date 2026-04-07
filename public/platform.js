@@ -1,3 +1,13 @@
+document.addEventListener(
+  'touchmove',
+  function (e) {
+    if (e.touches.length > 1) {
+      e.preventDefault();
+    }
+  },
+  { passive: false },
+);
+
 function checkPWASupport() {
     if (window.matchMedia('(display-mode: standalone)').matches) {
         console.log('App is running in standalone mode');
